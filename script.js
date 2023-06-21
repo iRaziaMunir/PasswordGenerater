@@ -37,8 +37,8 @@ let allSymbols = "~!@#$%^&*";
 
     let i = 1;
     while (i<= inputSlider.value) {
-        
-        genPassword = allChars.charAt(Math.floor(Math.random()* allChars.length));
+
+        genPassword += allChars.charAt(Math.floor(Math.random()* allChars.length));
         i++;
     }
 
