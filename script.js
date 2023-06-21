@@ -8,18 +8,42 @@ let symbols = document.getElementById('symbols');
 let genBtn = document.getElementById('genBtn');
 
 
-// sliderValue.textContent = inputSlider.value;
-inputSlider.addEventListener('input',()=>{
+    sliderValue.textContent = inputSlider.value;
+    inputSlider.addEventListener('input',()=>{
     sliderValue.textContent = inputSlider.value;
 })
 
 genBtn.addEventListener('click',()=>{
     passBox.value = generatePassword();
 })
+let lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
+let UpperCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let allNumbers = "0123456789";
+let allSymbols = "~!@#$%^&*";
+let allChars = "";
 
-function generatePassword(){
-    let genPassword = '';
-    genPassword = Math.floor(Math.random()* 10);
+allChars += lowercase.checked ? lowerCharacters : "";
+allChars += UpperCase.checked ? UpperCharacter : "";
+allChars += numbers.checked ? allNumbers : "";
+allChars += symbols.checked ? allSymbols : "";
+
+if (allChars == " "|| allChars.length == 0) {
     return genPassword;
-   
+    
 }
+
+let i = 1;
+while (i <= inputSlider.value) {
+    genPassword = allChars.charAt(Math.floor(Math.random()* allChars.length));
+    i++;
+
+}
+    return genPassword;
+
+
+// function generatePassword(){
+//     let genPassword = '';
+//     genPassword = UpperCharacter.charAt(Math.floor(Math.random()* UpperCharacter.length));
+//     return genPassword;
+   
+// }
