@@ -20,28 +20,27 @@ let lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
 let UpperCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let allNumbers = "0123456789";
 let allSymbols = "~!@#$%^&*";
-let allChars = "";
 
 
-if (allChars == " "|| allChars.length == 0) {
-    return genPassword;
-    
-}
-
-let i = 1;
-while (i <= inputSlider.value) {
-    genPassword = allChars.charAt(Math.floor(Math.random()* allChars.length));
-    i++;
-
-}
  function generatePassword(){
     let genPassword = '';
     let allChars = "";
-        
     allChars += lowercase.checked ? lowerCharacters : "";
     allChars += UpperCase.checked ? UpperCharacter : "";
     allChars += numbers.checked ? allNumbers : "";
     allChars += symbols.checked ? allSymbols : "";
+
+
+    if (allChars == " "|| allChars.length == 0) {
+        return genPassword;
+    }
+
+    let i = 1;
+    while (i<= inputSlider.value) {
+        
+        genPassword = allChars.charAt(Math.floor(Math.random()* allChars.length));
+        i++;
+    }
 
 //     genPassword = UpperCharacter.charAt(Math.floor(Math.random()* UpperCharacter.length));
     return genPassword;
