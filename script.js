@@ -6,7 +6,7 @@ let UpperCase = document.getElementById('UpperCase');
 let numbers = document.getElementById('numbers');
 let symbols = document.getElementById('symbols');
 let genBtn = document.getElementById('genBtn');
-
+let copyIcon = document.getElementById('copyIcon');
 
     sliderValue.textContent = inputSlider.value;
     inputSlider.addEventListener('input',()=>{
@@ -45,3 +45,8 @@ let allSymbols = "~!@#$%^&*";
 //     genPassword = UpperCharacter.charAt(Math.floor(Math.random()* UpperCharacter.length));
     return genPassword;
  }
+
+ copyIcon.addEventListener('click',()=>{
+
+    navigator.clipboard.writeText(passBox.value);
+ });

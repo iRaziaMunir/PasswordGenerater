@@ -29,7 +29,10 @@ body{
 .inputBox span{
     position: absolute;
     color: #000000b5;
-    top: 16px;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 28px;
 }
 #passBox{
     border: none;
