@@ -37,17 +37,17 @@ body{
 #passBox{
     border: none;
     outline: none;
-    width: 300px;
+    width: 310px;
     padding: 10px;
     font-size: 20px;
-    border-radius: 5px;
+    border-radius:5px;
 }
-#range{
-    width: 200px;
+#inputSlider{
+    width: 310px;
 }
 .row{
     display: flex;
-    margin-block: 4px;
+    margin-block: 8px;
 }
 .row p,.row label{
     flex-basis: 100%;
@@ -55,7 +55,7 @@ body{
 }
 .row input[type="checkbox"]{
     width: 18px;
-    height: 18;
+    height: 18px;
 }
 button{
     background-color:#00f497b5;

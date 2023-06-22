@@ -46,7 +46,10 @@ let allSymbols = "~!@#$%^&*";
     return genPassword;
  }
 
- copyIcon.addEventListener('click',()=>{
+    copyIcon.addEventListener('click',()=>{
+    if (passBox.value != " ") {
+        navigator.clipboard.writeText(passBox.value);
 
-    navigator.clipboard.writeText(passBox.value);
+    }
+
  });
