@@ -11,6 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     background: linear-gradient(to top ,rgb(25, 101, 113),rgb(86, 34, 39));
+    font-weight: 600;
 }
 .container{
     border: 1px solid rgb(218, 212, 212);
@@ -33,6 +34,7 @@ body{
     right: 12px;
     cursor: pointer;
     font-size: 28px;
+    z-index: 2;
 }
 #passBox{
     border: none;
@@ -41,6 +43,8 @@ body{
     padding: 10px;
     font-size: 20px;
     border-radius:5px;
+    background-color: rgb(217, 211, 211);
+    text-overflow: ellipsis;
 }
 #inputSlider{
     width: 310px;
