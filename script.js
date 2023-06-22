@@ -13,7 +13,7 @@ let copyIcon = document.getElementById('copyIcon');
     sliderValue.textContent = inputSlider.value;
 })
 
-genBtn.addEventListener('click',()=>{
+genBtn.addEventListener('click', ()=>{
     passBox.value = generatePassword();
 })
 let lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
@@ -23,8 +23,8 @@ let allSymbols = "~!@#$%^&*";
 
 
  function generatePassword(){
-    let genPassword = '';
-    let allChars = "";
+    let genPassword = " ";
+    let allChars = " ";
     allChars += lowercase.checked ? lowerCharacters : "";
     allChars += UpperCase.checked ? UpperCharacter : "";
     allChars += numbers.checked ? allNumbers : "";
@@ -46,10 +46,18 @@ let allSymbols = "~!@#$%^&*";
     return genPassword;
  }
 
-    copyIcon.addEventListener('click',()=>{
-    if (passBox.value != " ") {
+        copyIcon.addEventListener('click' , ()=>{
+    if (passBox.value != " " || passBox.value.length >=1) {
         navigator.clipboard.writeText(passBox.value);
+        copyIcon.innerText = "check";
+        copyIcon.title = " Password Copied";
 
+        setTimeout(() => {
+            copyIcon.innerHTML = " content_copy";
+            copyIcon.title = " ";
+            
+        }, 3000);
     }
 
  });
+ 
