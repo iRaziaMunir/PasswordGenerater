@@ -22,8 +22,12 @@ let UpperCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let allNumbers = "0123456789";
 let allSymbols = "~!@#$%^&*";
 
- function generatePassword(){
+ function generatePassword()
+ {
     let genPassword = "";
+    let allowedCharacters;
+
+    allowedCharacters
     let allChars = "";
         allChars += lowercase.checked ? lowerCharacters : "";
         allChars += UpperCase.checked ? UpperCharacter : "";
