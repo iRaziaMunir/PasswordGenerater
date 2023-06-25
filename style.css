@@ -28,13 +28,14 @@ body{
 }
 .inputBox #copyIcon{
     position: absolute;
-    color: #fdfdfdb5;
     top: 16px;
     right: 12px;
     cursor: pointer;
     height: 30px;
     z-index: 2;
+    fill: white;
 }
+
 #passBox{
     border: none;
     outline: none;
