@@ -18,7 +18,7 @@ genBtn.addEventListener('click', ()=>{
 });
 
 let lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
-let UpperCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let upperCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let allNumbers = "0123456789";
 let allSymbols = "~!@#$%^&*";
 
@@ -30,7 +30,7 @@ let allSymbols = "~!@#$%^&*";
     allowedCharacters
     let allChars = "";
         allChars += lowercase.checked ? lowerCharacters : "";
-        allChars += UpperCase.checked ? UpperCharacter : "";
+        allChars += UpperCase.checked ? upperCharacter : "";
         allChars += numbers.checked ? allNumbers : "";
         allChars += symbols.checked ? allSymbols : "";
 
@@ -43,7 +43,7 @@ let allSymbols = "~!@#$%^&*";
         i++;
     }
 
-//     genPassword = UpperCharacter.charAt(Math.floor(Math.random()* UpperCharacter.length));
+//     genPassword = upperCharacter.charAt(Math.floor(Math.random()* upperCharacter.length));
     return genPassword;
  }
 
